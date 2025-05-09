@@ -1,0 +1,55 @@
+{
+    "satellites": "AUTO",
+    "min_elevation": 20,
+    "min_duration": 300,
+    "check_interval": 30,
+    "prediction_window": 24,
+    "log_file": "/ryanrotella/satellite/sat_tracker.log",
+    "observer": {
+        "lat": 40.699484,
+        "lon": -73.974255,
+        "elevation": 10
+    },
+    "satellite_categories": {
+        "NOAA": true,
+        "METEOR": true,
+        "AMSAT": true,
+        "ISS": true,
+        "GOES": false,
+        "OTHER": true
+    },
+    "notification_satellites": [
+        "NOAA-15",
+        "NOAA-18",
+        "NOAA-19",
+        "ISS (ZARYA)",
+        "ISS"
+    ],
+    "satellite_frequencies": {
+        "NOAA-15": 137620000,
+        "NOAA-18": 137912500,
+        "NOAA-19": 137100000,
+        "METEOR-M 2": 137100000,
+        "METEOR-M2 2": 137900000,
+        "ISS": 145800000,
+        "ISS-APRS": 145825000,
+        "AO-91": 145960000,
+        "AO-92": 145880000,
+        "SO-50": 436795000,
+        "METEOR-M2 3": 137900000,
+        "OSCAR 7": 145950000
+    },
+    "mqtt": {
+        "broker": "energyctrlserver.cloud.shiftr.io",
+        "port": 8883,
+        "username": "energyctrlserver",
+        "password": "00000000",
+        "topic_prefix": "satellite/",
+        "client_id": "mac_tracker",
+        "power_control_topic": "status",
+        "keepalive": 60,
+        "reconnect_delay": 30,
+        "max_payload_size": 65000,
+        "qos": 0
+    }
+}
